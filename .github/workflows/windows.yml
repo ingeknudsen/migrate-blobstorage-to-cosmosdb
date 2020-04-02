@@ -1,0 +1,13 @@
+name: radix-web-console-pr
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    name: Build
+    runs-on: windows-latest
+    steps:
+      - name: Build docker image
+        run: |
+          wget https://aka.ms/csdmtool
