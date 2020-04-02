@@ -8,6 +8,7 @@ $wc.DownloadFile($url, $output)
 $unzipTo = "$PSScriptRoot\unzipped\"
 Expand-Archive -LiteralPath $output -DestinationPath $unzipTo
 
-Get-ChildItem -Path $unzipTo\drop
+Write-Output "Execute"
+& '$unzipTo\drop\dt.exe'
 
-Write-Output "IKNU TEST: Done unzipping"
+Write-Output "IKNU TEST: Done executing"
