@@ -1,11 +1,11 @@
-name: radix-web-console-pr
+name: migrate-tables
 on:
   push:
     branches:
       - master
 jobs:
   build:
-    name: Build
+    name: migrate
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v1
