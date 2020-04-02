@@ -9,6 +9,6 @@ $unzipTo = "$PSScriptRoot\unzipped\"
 Expand-Archive -LiteralPath $output -DestinationPath $unzipTo
 
 Write-Output "Execute"
-& '$unzipTo\drop\dt.exe'
+Start-Process "$unzipTo\drop\dt.exe"
 
 Write-Output "IKNU TEST: Done executing"
