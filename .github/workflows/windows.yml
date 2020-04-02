@@ -11,4 +11,4 @@ jobs:
       - name: Bootstrap
         shell: powershell
         run: |
-          ./bootstrap.ps1
+          .\scripts\bootstrap.ps1
