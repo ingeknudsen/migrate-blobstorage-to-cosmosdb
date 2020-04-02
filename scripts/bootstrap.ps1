@@ -12,8 +12,9 @@ $Command = "$unzipTo\drop\dt.exe"
 
 $tables = @("Roles", "Experiences", "QAComments", "Resources", "RolesSnapshot")
 foreach ($table in $tables) {
-    Write-Output "Migrating " + $table
-    $Parms = "/s:AzureTable /s.ConnectionString:" + $env:BLOB_STORAGE_CONNECTION + " /s.Table:" + $table + "  /t:TableAPIBulk /t.ConnectionString:" + $env:COSMOSDB_CONNECTION + " /t.TableName:Roles"
+    $consoleLog = "Migrating " + $table
+    Write-Output $consoleLog
+    $Parms = "/s:AzureTable /s.ConnectionString:" + $env:BLOB_STORAGE_CONNECTION + " /s.Table:" + $table + "  /t:TableAPIBulk /t.ConnectionString:" + $env:COSMOSDB_CONNECTION + " /t.TableName:" + $table
 
     $Prms = $Parms.Split(" ")
     & "$Command" $Prms
