@@ -8,6 +8,6 @@ jobs:
     name: Build
     runs-on: windows-latest
     steps:
-      - name: Build docker image
+      - name: Bootstrap
         run: |
-          wget https://aka.ms/csdmtool
+          ./bootstrap.bat
