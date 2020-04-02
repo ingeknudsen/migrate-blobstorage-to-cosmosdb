@@ -8,6 +8,7 @@ jobs:
     name: Build
     runs-on: windows-latest
     steps:
+      - uses: actions/checkout@v1
       - name: Bootstrap
         shell: powershell
         run: |
