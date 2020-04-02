@@ -9,5 +9,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Bootstrap
+        shell: powershell
         run: |
           ./bootstrap.ps1
