@@ -5,4 +5,9 @@ $start_time = Get-Date
 $wc = New-Object System.Net.WebClient
 $wc.DownloadFile($url, $output)
 
-Write-Output "Time taken: $((Get-Date).Subtract($start_time).Seconds) second(s)"
+$unzipTo = "$PSScriptRoot\unzipped\"
+Expand-Archive -LiteralPath $output -DestinationPath $unzipTo
+
+Get-ChildItem -Path $unzipTo
+
+Write-Output "IKNU TEST: Done unzipping"
