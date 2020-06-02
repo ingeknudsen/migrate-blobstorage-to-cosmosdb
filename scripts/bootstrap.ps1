@@ -10,7 +10,7 @@ Expand-Archive -LiteralPath $output -DestinationPath $unzipTo
 
 $Command = "$unzipTo\drop\dt.exe"
 
-$tables = @("Roles", "Experiences", "QAComments", "Resources", "RolesSnapshot")
+$tables = @("Roles", "Experiences", "QAComments", "Resources", "RolesSnapshot", "Migration")
 foreach ($table in $tables) {
     $consoleLog = "Migrating " + $table
     Write-Output $consoleLog
